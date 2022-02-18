@@ -7,6 +7,7 @@
 package gotsc
 
 import (
+	"fmt"
 	"testing"
 	"time"
 )
@@ -18,6 +19,7 @@ const (
 
 func TestTSCOverhead(t *testing.T) {
 	tsc := TSCOverhead()
+	fmt.Println("Overhead", tsc)
 	if tsc < 10 || tsc > 100 {
 		t.Errorf("TSC Overhead returned number outside expected range: %d\n", tsc)
 	}

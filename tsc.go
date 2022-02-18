@@ -31,7 +31,7 @@ func TSCOverhead() uint64 {
 	var t0, t1 uint64
 	overhead := uint64(1000000000000000000)
 
-	for i := 0; i < 100000; i++ {
+	for i := 0; i < 1000000; i++ {
 		t0 = BenchStart()
 		t1 = BenchEnd()
 		if t1-t0 < overhead {
